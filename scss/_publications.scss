@@ -1,0 +1,116 @@
+.publications {
+  width: 100%;
+  padding: 30px;
+  font-size: 0;
+  background-color: #f5f5fa;
+
+  @media screen and (min-width: 768px) {
+    padding: 30px 60px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 30px 160px;
+  }
+
+  &-heading {
+    @include font-white-bold;
+    @include grad-text;
+    font-size: 30px;
+    line-height: 37px;
+    margin: 3px 0 30px;
+
+    @media screen and (min-width: 768px) {
+      margin: 10px 0 30px;
+      font-size: 38px;
+      line-height: 46px;
+    }
+  }
+
+  &-cards {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    background-color: #fff;
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    overflow: hidden;
+
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 30px) / 2);
+      align-self: stretch;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: calc((100% - 60px) / 3);
+    }
+  }
+
+  &__card:last-of-type {
+    @media screen and (min-width: 768px) {
+      flex-grow: 1;
+    }
+
+    @media screen and (min-width: 1024px) {
+      flex-grow: 0;
+    }
+  }
+
+  &__card:not(:last-of-type) {
+    margin-bottom: 30px;
+
+    @media screen and (min-width: 1024px) {
+      margin-bottom: unset;
+    }
+  }
+
+  .card-content {
+    padding: 30px;
+  }
+
+  &__img {
+    object-fit: cover;
+    height: 200px;
+  }
+
+  &__title {
+    display: block;
+    @include font-black-bold;
+    line-height: 20px;
+    color: #24a3ff;
+    transition: $default-transition;
+  }
+
+  &__title:hover {
+    color: $hover-color;
+  }
+
+  &__date {
+    display: block;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #b3b3ba;
+    margin: 15px 0;
+  }
+
+  &__preview {
+    font-size: 14px;
+    line-height: 22px;
+
+    padding-top: 15px;
+    border-top: 4px solid #e6e6f0;
+  }
+}

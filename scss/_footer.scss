@@ -1,0 +1,117 @@
+.footer {
+  background-color: #f5f5fa;
+  padding: 0 30px 30px;
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 60px 30px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 0 160px 30px;
+  }
+
+  &-content {
+    border-top: 2px solid #e6e6f0;
+    padding-top: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+
+  &-address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    .address::after,
+    .phone::after,
+    .phone::before {
+      display: inline-block;
+      content: "";
+      border-radius: 50%;
+      height: 6px;
+      width: 6px;
+      margin: 0 10px 2px;
+      background-color: #b3b3ba;
+    }
+  }
+
+  .address-link {
+    margin-top: 10px;
+
+    @media screen and (min-width: 768px) {
+      margin-top: unset;
+    }
+  }
+
+  &-contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0 30px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      margin: 20px 0 0;
+
+      order: 2;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 100%;
+    }
+  }
+
+  .phone {
+    color: #46466e;
+    margin: 10px 0;
+
+    @media screen and (min-width: 768px) {
+      margin: unset;
+    }
+  }
+
+  .address {
+    color: #323264;
+  }
+}
+
+.services-footer {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-content {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      border-top: unset;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .footer-contacts {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      order: 0;
+      margin: 20px 0 30px;
+    }
+  }
+}

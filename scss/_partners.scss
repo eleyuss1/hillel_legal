@@ -1,0 +1,115 @@
+.partners {
+  width: 100%;
+  padding-top: calc(60px - (60px - 30px - 16px));
+
+  @media screen and (min-width: 1920px) {
+    padding: 46px 100px 60px;
+  }
+
+  &-headline {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #323264;
+    margin-bottom: 30px;
+  }
+
+  &-brands {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: 1920px) {
+      border-radius: 12px;
+      overflow: hidden;
+    }
+  }
+
+  &__logo {
+    height: 120px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      width: calc(100% / 3);
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: calc(100% / 4);
+    }
+
+    &_hillel {
+      background-color: #1c4280;
+    }
+
+    &_wannabiz {
+      background-color: #143646;
+    }
+
+    &_tapgerine {
+      background-color: #f48b30;
+    }
+
+    &_3dlook {
+      background-color: #9e4dc3;
+    }
+
+    &_orangear {
+      background-color: #fd9339;
+    }
+
+    &_adtelligent {
+      background-color: #e2e2e4;
+    }
+
+    &_clicky {
+      background-color: #c71c36;
+    }
+
+    &_ecoleasing {
+      background-color: #dcf3f9;
+    }
+
+    &_infratek {
+      background-color: #eaeaea;
+    }
+
+    &_citypark {
+      background-color: #282240;
+    }
+
+    &_artprint {
+      background-color: #1d4568;
+    }
+
+    &_ultimatecard {
+      background-color: #000;
+    }
+
+    &_clicky,
+    &_ecoleasing,
+    &_infratek,
+    &_citypark,
+    &_artprint,
+    &_ultimatecard {
+      display: none;
+
+      @media screen and (min-width: 768px) {
+        display: flex;
+      }
+    }
+  }
+}
+
+.services-partners {
+  padding-top: calc(60px + 20px);
+}

@@ -1,0 +1,231 @@
+.features {
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 0 160px;
+  }
+
+  .features-container {
+    @media screen and (min-width: 768px) {
+      padding: unset;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      padding: 60px;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .features-scroll {
+    padding: 30px 0;
+    display: flex;
+    overflow: scroll;
+    font-size: 0;
+
+    @media screen and (min-width: 768px) {
+      padding: 60px 0;
+    }
+
+    @media screen and (min-width: 1024px) {
+      overflow: visible;
+      text-align: right;
+      padding: 0 60px 0 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-right: 4px solid #707093;
+    }
+  }
+
+  &__name {
+    @include font-white-bold;
+    color: #b3b3ba;
+    font-size: 30px;
+    transition: $default-transition;
+    flex-shrink: 0;
+    margin-left: 30px;
+
+    @media screen and (min-width: 768px) {
+      margin-left: 30px;
+      font-size: 38px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: block;
+      margin: unset;
+    }
+  }
+
+  &__name:not(:last-of-type) {
+    @media screen and (min-width: 1024px) {
+      margin-right: unset;
+      margin-bottom: 30px;
+    }
+  }
+  &__name:first-of-type {
+    @media screen and (min-width: 768px) {
+      margin-left: 60px;
+    }
+    @media screen and (min-width: 1024px) {
+      margin-left: unset;
+    }
+  }
+
+  &__name:hover {
+    color: $hover-color;
+    cursor: pointer;
+  }
+
+  &__name-true {
+    @include grad-text;
+  }
+
+  .features-desc-wrap {
+    padding-right: 30px;
+    margin: 0 0 30px 30px;
+    border-top: 4px solid #707093;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 0 60px 60px;
+      padding-right: 60px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      width: 50%;
+      border-top: unset;
+      margin: unset;
+      padding: 0 0 0 60px;
+      border-left: 4px solid #707093;
+    }
+
+    @media screen and (min-width: 1440px) {
+      border-left: unset;
+    }
+  }
+
+  &__headline {
+    @include font-white-bold;
+    font-size: 20px;
+    margin: 30px 0;
+
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+      margin: 65px 0 30px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      margin: 0 0 30px;
+    }
+  }
+
+  &__description {
+    @include font-white;
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  .features-content {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media screen and (min-width: 768px) {
+      padding-right: 60px;
+      padding-left: 60px;
+    }
+
+    &__headline {
+      @include font-black-bold;
+      @include grad-text;
+      font-size: 30px;
+      line-height: 37px;
+      margin: 5px 0 30px;
+
+      @media screen and (min-width: 768px) {
+        font-size: 38px;
+        line-height: 46px;
+        margin: 10px 0 60px;
+      }
+    }
+
+    .features-cards {
+      padding-bottom: 60px;
+
+      @media screen and (min-width: 768px) {
+        padding-bottom: unset;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: baseline;
+      }
+
+      &__item {
+        @media screen and (min-width: 768px) {
+          width: 45%;
+        }
+
+        @media screen and (min-width: 1024px) {
+          width: calc((100% - 120px) / 3);
+        }
+      }
+
+      &__headline {
+        display: block;
+        @include font-black-bold;
+        font-size: 22px;
+        line-height: 27px;
+        color: #24a3ff;
+        margin: 30px 0 15px;
+        transition: $default-transition;
+      }
+
+      &__headline:hover {
+        color: $hover-color;
+        cursor: pointer;
+      }
+
+      &__description {
+        @include font-white;
+        font-size: 16px;
+        line-height: 26px;
+      }
+
+      &__img {
+        border: 14px solid #fff;
+        background: #fff;
+        border-radius: 24px;
+      }
+
+      &__item:not(:last-of-type) {
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+  }
+}
+
+.services-features {
+  padding: 30px 30px 60px;
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 60px 0;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 60px 160px 0;
+  }
+
+  .features-content {
+    padding: unset;
+  }
+}

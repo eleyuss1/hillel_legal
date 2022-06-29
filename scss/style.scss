@@ -1,0 +1,198 @@
+$font-color-header: #fff;
+$default-transition: all 0.2s linear;
+$shadow-height: 10px;
+$hover-color: #f0145a;
+
+@mixin font-white {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin font-white-bold {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin font-black {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@mixin font-black-bold {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@mixin grad-text {
+  background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@import "./nav";
+@import "./header";
+@import "./features";
+@import "./hero";
+@import "./team";
+@import "./partners";
+@import "./publications";
+@import "./footer";
+@import "./service-entry";
+@import "./publication-entry";
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff"),
+    url("../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff"),
+    url("../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Classes to use throughout the code (with @extend or else)*/
+
+.btn {
+  font-family: Montserrat;
+  border: unset;
+  transition: $default-transition;
+}
+
+.btn:hover {
+  cursor: pointer;
+  background-color: $hover-color;
+}
+
+.shadow {
+  margin: 0 auto;
+  height: $shadow-height;
+  border-radius: 0px 0px 12px 12px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.gradient {
+  background: linear-gradient(
+    228.57deg,
+    #323264 11.93%,
+    #323264 57.17%,
+    #643e72 87.46%
+  );
+  border-radius: 0px 0px 12px 12px;
+  position: relative;
+}
+
+.gradient::before {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 40px);
+  bottom: 0;
+  left: 20px;
+  box-shadow: 0 10px 0 #cacadb;
+  border-radius: 0 0 12px 12px;
+  z-index: -1;
+}
+
+.gradient::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: calc(100% - 80px);
+  bottom: -10px;
+  left: 40px;
+  box-shadow: 0 10px 0 #e7e7f2;
+  border-radius: 0 0 12px 12px;
+  z-index: -2;
+}
+
+.services-gradient {
+  margin-bottom: 80px;
+}
+
+.breadcrumb {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #24a3ff;
+  transition: $default-transition;
+  margin-right: 3px;
+
+  border: 2px solid #fff;
+  border: hidden;
+}
+
+.breadcrumb:hover {
+  color: $hover-color;
+  cursor: pointer;
+}
+
+.breadcrumb:hover ~ .chevron > .chevron-path {
+  stroke: $hover-color;
+  cursor: pointer;
+}
+
+.chevron {
+  display: inline-block;
+  border: 2px solid #fff;
+  border: hidden;
+}
+
+.chevron-path {
+  transition: $default-transition;
+}
+
+.phone {
+  font-weight: 700;
+  color: $font-color-header;
+}
+
+.phone:hover {
+  text-decoration: underline;
+}
+
+.address,
+.copywright {
+  color: #b3b3ba;
+}
+
+.email {
+  color: #24a3ff;
+  font-weight: 700;
+}
+
+.email:hover {
+  text-decoration: underline;
+}
+
+.facebook-link__path {
+  transition: $default-transition;
+}
+
+.facebook-link__path:hover {
+  fill: #f0145a;
+  cursor: pointer;
+}
