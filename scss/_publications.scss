@@ -1,3 +1,7 @@
+:root {
+  overflow-x: hidden;
+}
+
 .publications {
   width: 100%;
   padding: 30px;
@@ -112,5 +116,120 @@
 
     padding-top: 15px;
     border-top: 4px solid #e6e6f0;
+  }
+}
+
+.publications-page {
+  padding: 0 30px 30px;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    padding: 0 60px 30px;
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 0 160px 30px;
+  }
+
+  .toggle-wrap {
+    display: flex;
+    justify-content: center;
+
+    .publications-toggle {
+      background: #e6e6f0;
+      border-radius: 12px;
+      text-align: center;
+      margin: 30px 0;
+      display: inline-flex;
+      position: relative;
+
+      .toggle__btn {
+        @include font-black-bold;
+        font-family: Montserrat;
+        color: #323264;
+        padding: 10px 30px;
+        background-color: unset;
+        border: unset;
+        z-index: 2;
+        cursor: pointer;
+
+        &_news {
+          padding: 10px 32px;
+        }
+      }
+
+      .toggle-switch {
+        position: absolute;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 10px;
+        padding: 16px 56px;
+        top: 2px;
+        left: 2px;
+      }
+    }
+
+    .toggle__btn_articles:focus ~ .toggle-switch {
+      animation: publications-toggle_toRight 0.5s ease-in-out forwards;
+    }
+
+    @keyframes publications-toggle_toRight {
+      0% {
+        left: 2px;
+      }
+
+      100% {
+        left: 113px;
+      }
+    }
+
+    .toggle__btn_news:focus ~ .toggle-switch {
+      animation: publications-toggle_toLeft 0.5s ease-in-out forwards;
+    }
+
+    @keyframes publications-toggle_toLeft {
+      0% {
+        left: 113px;
+      }
+
+      100% {
+        left: 2px;
+      }
+    }
+  }
+
+  &__card:last-of-type {
+    flex-grow: 0;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__card:nth-child(1),
+  &__card:nth-child(2),
+  &__card:nth-child(3) {
+    @media screen and (min-width: 1024px) {
+      margin-bottom: 30px;
+    }
+  }
+
+  .btn-link {
+    align-self: center;
+  }
+
+  .publications-btn {
+    @include font-white-bold;
+    padding: 18px 30px;
+    margin: 30px 0;
+    background: #24a3ff;
+    box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+    border-radius: 12px;
+
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
+      margin: 0 0 30px;
+    }
   }
 }
