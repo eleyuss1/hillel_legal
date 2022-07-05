@@ -20,6 +20,11 @@
   box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
   margin: 0 7.5px;
 }
+
+.glide__bullet_team {
+  box-shadow: unset;
+}
+
 .glide__bullet:focus {
   outline: none;
 }

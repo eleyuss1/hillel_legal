@@ -81,3 +81,219 @@
     color: var(--authortext-color);
   }
 }
+
+.team-page {
+  width: 100%;
+  padding: 30px 0 60px;
+
+  @media screen and (min-width: 768px) {
+    padding: 60px 0;
+  }
+
+  &-content {
+    padding: 0 30px;
+
+    @media screen and (min-width: 768px) {
+      padding: 0 60px;
+    }
+
+    @media screen and (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    @media screen and (min-width: 1440px) {
+      padding: 0 180px;
+    }
+
+    @media screen and (min-width: 1920px) {
+      padding: 0 280px;
+    }
+  }
+
+  &-headline {
+    @include font-white-bold;
+    @include grad-text;
+    font-size: 30px;
+    margin: 0 0 30px;
+
+    @media screen and (min-width: 768px) {
+      font-size: 38px;
+    }
+  }
+
+  &-text {
+    @media screen and (min-width: 1024px) {
+      padding-right: 30px;
+    }
+  }
+
+  &-desc {
+    font-size: 19px;
+    line-height: 30px;
+  }
+
+  &-subheading {
+    margin: 30px 0 0;
+    @media screen and (min-width: 1024px) {
+      width: 40%;
+      flex-shrink: 0;
+      margin: 0 0 0 60px;
+    }
+
+    @media screen and (min-width: 1440px) {
+      width: 33%;
+    }
+
+    @media screen and (min-width: 1920px) {
+      width: 30%;
+    }
+  }
+
+  .bullets {
+    padding-left: 30px;
+    border-left: 4px solid #e6e6f0;
+    margin-top: 30px;
+
+    @media screen and (min-width: 1024px) {
+      margin: unset;
+      flex-shrink: 0;
+      width: 40%;
+    }
+
+    @media screen and (min-width: 1920px) {
+      width: 30%;
+    }
+
+    &__card {
+      font-size: 0;
+
+      &:not(:last-of-type) {
+        margin-bottom: 40px;
+      }
+
+      .card__number {
+        @include font-white-bold;
+        @include grad-text;
+        font-size: 36px;
+        margin-left: 8px;
+      }
+
+      .card__text {
+        display: block;
+        font-size: 16px;
+        color: #323264;
+        margin-top: 5px;
+      }
+    }
+  }
+
+  &-img {
+    position: relative;
+    margin: 30px 0;
+
+    @media screen and (min-width: 768px) {
+      margin: 60px 0;
+    }
+
+    .img-main {
+      width: 100%;
+    }
+
+    .img-text {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include font-white-bold;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 36px;
+      --letter-spacing: 13px;
+      letter-spacing: var(--letter-spacing);
+      text-indent: var(--letter-spacing);
+      text-transform: uppercase;
+      text-align: center;
+
+      @media screen and (min-width: 768px) {
+        font-size: 46px;
+        --letter-spacing: 63px;
+      }
+
+      @media screen and (min-width: 1024px) {
+        font-size: 86px;
+      }
+
+      @media screen and (min-width: 1440px) {
+        font-size: 96px;
+      }
+    }
+  }
+}
+
+.achievements {
+  background-color: #f5f5fa;
+  padding: 30px 60px 76px;
+  @media screen and (min-width: 1920px) {
+    padding: 30px 160px 76px;
+  }
+
+  &-brands {
+    display: none;
+    @media screen and (min-width: 768px) {
+      display: block;
+    }
+
+    &_mob {
+      display: block;
+      @media screen and (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &-headline {
+    @include font-white-bold;
+    text-align: center;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    margin-bottom: 30px;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+
+    .card__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 12px;
+      width: calc((100% - 120px) / 4);
+      height: 90px;
+
+      @media screen and (min-width: 1024px) {
+        height: 110px;
+      }
+    }
+
+    .card__logo {
+      height: 40px;
+      @media screen and (min-width: 1024px) {
+        height: 60px;
+      }
+    }
+
+    &_mob {
+      display: block;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 25px 0;
+      text-align: center;
+    }
+  }
+}

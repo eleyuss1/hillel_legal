@@ -3,6 +3,7 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .glide * {
   box-sizing: inherit;
 }
@@ -42,10 +43,7 @@
   -moz-user-select: none;
   -ms-user-select: none;
 }
-.glide__arrows {
-  -webkit-touch-callout: none;
-  user-select: none;
-}
+
 .glide__bullets {
   -webkit-touch-callout: none;
   user-select: none;
