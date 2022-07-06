@@ -580,26 +580,13 @@
 
 .team-page {
   width: 100%;
-  padding: 30px 0 60px; }
+  padding: 30px 30px 60px; }
   @media screen and (min-width: 768px) {
     .team-page {
-      padding: 60px 0; } }
-  .team-page-content {
-    padding: 0 30px; }
-    @media screen and (min-width: 768px) {
-      .team-page-content {
-        padding: 0 60px; } }
-    @media screen and (min-width: 1024px) {
-      .team-page-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start; } }
-    @media screen and (min-width: 1440px) {
-      .team-page-content {
-        padding: 0 180px; } }
-    @media screen and (min-width: 1920px) {
-      .team-page-content {
-        padding: 0 280px; } }
+      padding: 60px; } }
+  @media screen and (min-width: 1920px) {
+    .team-page {
+      padding: 60px 160px; } }
   .team-page-headline {
     color: #fff;
     font-size: 16px;
@@ -609,146 +596,90 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     font-size: 30px;
-    margin: 0 0 30px; }
+    margin-bottom: 30px; }
     @media screen and (min-width: 768px) {
       .team-page-headline {
-        font-size: 38px; } }
-  @media screen and (min-width: 1024px) {
-    .team-page-text {
-      padding-right: 30px; } }
-  .team-page-desc {
-    font-size: 19px;
-    line-height: 30px; }
-  .team-page-subheading {
-    margin: 30px 0 0; }
+        font-size: 38px;
+        line-height: 46px;
+        width: 80%;
+        margin-bottom: 60px; } }
     @media screen and (min-width: 1024px) {
-      .team-page-subheading {
-        width: 40%;
-        flex-shrink: 0;
-        margin: 0 0 0 60px; } }
-    @media screen and (min-width: 1440px) {
-      .team-page-subheading {
-        width: 33%; } }
+      .team-page-headline {
+        padding: 0 120px; } }
     @media screen and (min-width: 1920px) {
-      .team-page-subheading {
-        width: 30%; } }
-  .team-page .bullets {
-    padding-left: 30px;
-    border-left: 4px solid #e6e6f0;
-    margin-top: 30px; }
+      .team-page-headline {
+        width: 95%; } }
+  @media screen and (min-width: 768px) {
+    .team-page .team-cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; } }
+  .team-page .team-cards__card {
+    display: grid;
+    grid-template-columns: 1fr 32px;
+    grid-template-rows: 1fr 20px auto; }
+    @media screen and (min-width: 768px) {
+      .team-page .team-cards__card {
+        width: calc((100% - 60px) / 2); } }
     @media screen and (min-width: 1024px) {
-      .team-page .bullets {
-        margin: unset;
-        flex-shrink: 0;
-        width: 40%; } }
-    @media screen and (min-width: 1920px) {
-      .team-page .bullets {
-        width: 30%; } }
-    .team-page .bullets__card {
-      font-size: 0; }
-      .team-page .bullets__card:not(:last-of-type) {
-        margin-bottom: 40px; }
-      .team-page .bullets__card .card__number {
-        color: #fff;
-        font-size: 16px;
-        font-weight: 700;
-        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        font-size: 36px;
-        margin-left: 8px; }
-      .team-page .bullets__card .card__text {
-        display: block;
-        font-size: 16px;
-        color: #323264;
-        margin-top: 5px; }
-  .team-page-img {
-    position: relative;
-    margin: 30px 0; }
-    @media screen and (min-width: 768px) {
-      .team-page-img {
-        margin: 60px 0; } }
-    .team-page-img .img-main {
-      width: 100%; }
-    .team-page-img .img-text {
-      position: absolute;
-      z-index: 2;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #fff;
-      font-size: 16px;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.8);
-      font-size: 36px;
-      --letter-spacing: 13px;
-      letter-spacing: var(--letter-spacing);
-      text-indent: var(--letter-spacing);
-      text-transform: uppercase;
-      text-align: center; }
+      .team-page .team-cards__card {
+        width: calc((100% - 120px) / 3); } }
+    .team-page .team-cards__card .card__img {
+      object-fit: cover;
+      height: 300px;
+      width: 100%;
+      border-radius: 12px;
+      grid-area: 1 / 1 / 2 / 6;
+      margin-bottom: 15px; }
       @media screen and (min-width: 768px) {
-        .team-page-img .img-text {
-          font-size: 46px;
-          --letter-spacing: 63px; } }
-      @media screen and (min-width: 1024px) {
-        .team-page-img .img-text {
-          font-size: 86px; } }
-      @media screen and (min-width: 1440px) {
-        .team-page-img .img-text {
-          font-size: 96px; } }
-
-.achievements {
-  background-color: #f5f5fa;
-  padding: 30px 60px 76px; }
-  @media screen and (min-width: 1920px) {
-    .achievements {
-      padding: 30px 160px 76px; } }
-  .achievements-brands {
-    display: none; }
-    @media screen and (min-width: 768px) {
-      .achievements-brands {
-        display: block; } }
-    .achievements-brands_mob {
-      display: block; }
-      @media screen and (min-width: 768px) {
-        .achievements-brands_mob {
-          display: none; } }
-  .achievements-headline {
-    color: #fff;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    line-height: 17px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: #323264;
-    margin-bottom: 30px; }
-  .achievements__card {
-    display: flex;
-    justify-content: space-between; }
-    .achievements__card .card__link {
+        .team-page .team-cards__card .card__img {
+          height: 400px; } }
+    .team-page .team-cards__card .card__link {
+      height: 32px;
+      width: 32px;
+      background-color: #f5f5fa;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: #fff;
-      border-radius: 12px;
-      width: calc((100% - 120px) / 4);
-      height: 90px; }
-      @media screen and (min-width: 1024px) {
-        .achievements__card .card__link {
-          height: 110px; } }
-    .achievements__card .card__logo {
-      height: 40px; }
-      @media screen and (min-width: 1024px) {
-        .achievements__card .card__logo {
-          height: 60px; } }
-    .achievements__card_mob {
-      display: block;
-      background-color: #fff;
-      border-radius: 12px;
-      padding: 25px 0;
-      text-align: center; }
+      border-radius: 50%;
+      grid-area: 2 / 2 / 3 / 3;
+      transition: all 0.2s linear; }
+    .team-page .team-cards__card .card__arrow_path {
+      transition: all 0.2s linear; }
+    .team-page .team-cards__card .card__link:hover > .card__arrow > .card__arrow_path {
+      stroke: #f0145a; }
+    .team-page .team-cards__card .card__link:hover {
+      background-color: #ededf7; }
+    .team-page .team-cards__card .card-content {
+      grid-area: 2 / 1 / 3 / 2; }
+    .team-page .team-cards__card .card__name {
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      color: #323264;
+      grid-area: 2 / 1 / 3 / 2;
+      margin-bottom: 5px;
+      transition: all 0.2s linear; }
+    .team-page .team-cards__card .card__name:hover {
+      color: #f0145a; }
+    .team-page .team-cards__card .card__position {
+      grid-area: 3 / 1 / 4 / 2;
+      font-size: 14px;
+      color: #b3b3ba; }
+  .team-page .team-cards__card:not(:last-of-type) {
+    margin-bottom: 30px; }
+    @media screen and (min-width: 768px) {
+      .team-page .team-cards__card:not(:last-of-type) {
+        margin-bottom: unset; } }
+  @media screen and (min-width: 768px) {
+    .team-page .team-cards__card:nth-of-type(-n + 4) {
+      margin-bottom: 60px; } }
+  @media screen and (min-width: 1024px) {
+    .team-page .team-cards__card:nth-of-type(-n + 4) {
+      margin-bottom: unset; } }
+  @media screen and (min-width: 1024px) {
+    .team-page .team-cards__card:nth-of-type(-n + 3) {
+      margin-bottom: 60px; } }
 
 .partners {
   width: 100%;
@@ -1081,6 +1012,10 @@
     order: 0;
     margin: 20px 0 30px; } }
 
+.team-footer .footer-content-wrap,
+.team-footer .footer-content {
+  border-top: unset; }
+
 .service-desc {
   width: 100%;
   padding: 30px 30px; }
@@ -1356,6 +1291,178 @@
       margin-right: 10px; }
     .article .social-media__link:hover {
       background: #ededf7; }
+
+.about {
+  width: 100%;
+  padding: 30px 0 60px; }
+  @media screen and (min-width: 768px) {
+    .about {
+      padding: 60px 0; } }
+  .about-content {
+    padding: 0 30px; }
+    @media screen and (min-width: 768px) {
+      .about-content {
+        padding: 0 60px; } }
+    @media screen and (min-width: 1024px) {
+      .about-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start; } }
+    @media screen and (min-width: 1440px) {
+      .about-content {
+        padding: 0 180px; } }
+    @media screen and (min-width: 1920px) {
+      .about-content {
+        padding: 0 280px; } }
+  .about-headline {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-size: 30px;
+    margin: 0 0 30px; }
+    @media screen and (min-width: 768px) {
+      .about-headline {
+        font-size: 38px; } }
+  @media screen and (min-width: 1024px) {
+    .about-text {
+      padding-right: 30px; } }
+  .about-desc {
+    font-size: 19px;
+    line-height: 30px; }
+  .about-subheading {
+    margin: 30px 0 0; }
+    @media screen and (min-width: 1024px) {
+      .about-subheading {
+        width: 40%;
+        flex-shrink: 0;
+        margin: 0 0 0 60px; } }
+    @media screen and (min-width: 1440px) {
+      .about-subheading {
+        width: 33%; } }
+    @media screen and (min-width: 1920px) {
+      .about-subheading {
+        width: 30%; } }
+  .about .bullets {
+    padding-left: 30px;
+    border-left: 4px solid #e6e6f0;
+    margin-top: 30px; }
+    @media screen and (min-width: 1024px) {
+      .about .bullets {
+        margin: unset;
+        flex-shrink: 0;
+        width: 40%; } }
+    @media screen and (min-width: 1920px) {
+      .about .bullets {
+        width: 30%; } }
+    .about .bullets__card {
+      font-size: 0; }
+      .about .bullets__card:not(:last-of-type) {
+        margin-bottom: 40px; }
+      .about .bullets__card .card__number {
+        color: #fff;
+        font-size: 16px;
+        font-weight: 700;
+        background: linear-gradient(90.13deg, #f0145a 0.84%, #ef8080 99.96%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        font-size: 36px;
+        margin-left: 8px; }
+      .about .bullets__card .card__text {
+        display: block;
+        font-size: 16px;
+        color: #323264;
+        margin-top: 5px; }
+  .about-img {
+    position: relative;
+    margin: 30px 0; }
+    @media screen and (min-width: 768px) {
+      .about-img {
+        margin: 60px 0; } }
+    .about-img .img-main {
+      width: 100%; }
+    .about-img .img-text {
+      position: absolute;
+      z-index: 2;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 36px;
+      --letter-spacing: 13px;
+      letter-spacing: var(--letter-spacing);
+      text-indent: var(--letter-spacing);
+      text-transform: uppercase;
+      text-align: center; }
+      @media screen and (min-width: 768px) {
+        .about-img .img-text {
+          font-size: 46px;
+          --letter-spacing: 63px; } }
+      @media screen and (min-width: 1024px) {
+        .about-img .img-text {
+          font-size: 86px; } }
+      @media screen and (min-width: 1440px) {
+        .about-img .img-text {
+          font-size: 96px; } }
+
+.achievements {
+  background-color: #f5f5fa;
+  padding: 30px 60px 76px; }
+  @media screen and (min-width: 1920px) {
+    .achievements {
+      padding: 30px 160px 76px; } }
+  .achievements-brands {
+    display: none; }
+    @media screen and (min-width: 768px) {
+      .achievements-brands {
+        display: block; } }
+    .achievements-brands_mob {
+      display: block; }
+      @media screen and (min-width: 768px) {
+        .achievements-brands_mob {
+          display: none; } }
+  .achievements-headline {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 17px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #323264;
+    margin-bottom: 30px; }
+  .achievements__card {
+    display: flex;
+    justify-content: space-between; }
+    .achievements__card .card__link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 12px;
+      width: calc((100% - 120px) / 4);
+      height: 90px; }
+      @media screen and (min-width: 1024px) {
+        .achievements__card .card__link {
+          height: 110px; } }
+    .achievements__card .card__logo {
+      height: 40px; }
+      @media screen and (min-width: 1024px) {
+        .achievements__card .card__logo {
+          height: 60px; } }
+    .achievements__card_mob {
+      display: block;
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 25px 0;
+      text-align: center; }
 
 @font-face {
   font-family: "Montserrat";
