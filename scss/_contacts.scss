@@ -1,0 +1,95 @@
+.contacts {
+  padding: 30px;
+
+  @media screen and (min-width: 768px) {
+    padding: 60px;
+  }
+
+  @media screen and (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media screen and (min-width: 1440px) {
+    padding: 60px 180px;
+  }
+
+  @media screen and (min-width: 1920px) {
+    padding: 60px 280px;
+  }
+
+  &-form {
+    position: relative;
+    opacity: 1;
+    visibility: visible;
+    z-index: 1;
+    width: 100%;
+
+    @media screen and (min-width: 1024px) {
+      transform: unset;
+      left: unset;
+      width: calc((100% - 60px) / 2);
+    }
+
+    .form-btn {
+      padding: 18px 30px;
+      background: #24a3ff;
+      box-shadow: 0px 0px 20px rgba(36, 163, 255, 0.5);
+      border-radius: 12px;
+      @include font-white-bold;
+    }
+
+    .form__headline {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    @media screen and (min-width: 1024px) {
+      width: calc((100% - 60px) / 2);
+    }
+  }
+
+  &-content__item {
+    display: block;
+    font-size: 21px;
+    color: #323264;
+    padding-bottom: 30px;
+  }
+
+  .contacts-phone {
+    font-weight: 400;
+    color: #323264;
+    padding: 30px 0 15px;
+  }
+
+  .contacts-email,
+  .contacts-address {
+    border-bottom: 4px solid #e6e6f0;
+  }
+
+  &-facebook {
+    display: flex;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  &-facebook:hover > .facebook-desc {
+    color: $hover-color;
+  }
+
+  &-facebook:hover > .facebook-link > .facebook-logo > .facebook-link__path {
+    fill: $hover-color;
+  }
+
+  .facebook-desc {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #24a3ff;
+    margin-left: 10px;
+    transition: $default-transition;
+  }
+}

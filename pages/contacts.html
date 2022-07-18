@@ -4,11 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Team</title>
+    <title>Contacts</title>
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header class="header services-header publications-header team-header">
+    <header class="header services-header publications-header contacts-header">
       <div class="header-top">
         <ul class="header-top__lang">
           <li class="header-top__item">
@@ -69,7 +69,7 @@
             <img class="header-logo" src="../img/logo_dark.svg" alt="logo" />
           </a>
           <img class="header__slash" src="../img/slash_services.svg" alt="" />
-          <span class="header-logo__subtitle">team</span>
+          <span class="header-logo__subtitle">contact</span>
         </div>
 
         <input class="burger-checkbox" type="checkbox" id="burger-toggle" />
@@ -104,15 +104,17 @@
               <a href="./services.html" class="nav_mob__link">послуги</a>
             </li>
             <li class="nav_mob__item">
-              <a href="./team.html" class="nav_mob__link nav_mob__link_active"
-                >команда</a
-              >
+              <a href="./team.html" class="nav_mob__link">команда</a>
             </li>
             <li class="nav_mob__item">
               <a href="./publications.html" class="nav_mob__link">публікації</a>
             </li>
             <li class="nav_mob__item">
-              <a href="./contacts.html" class="nav_mob__link">контакти </a>
+              <a
+                href="./contacts.html"
+                class="nav_mob__link nav_mob__link_active"
+                >контакти
+              </a>
             </li>
           </ul>
         </nav>
@@ -131,9 +133,7 @@
             >
           </li>
           <li class="nav__item">
-            <a
-              href="./team.html"
-              class="nav__link nav__link_publications nav__link_active"
+            <a href="./team.html" class="nav__link nav__link_publications"
               >team</a
             >
           </li>
@@ -145,7 +145,9 @@
             >
           </li>
           <li class="nav__item">
-            <a href="./contacts.html" class="nav__link nav__link_publications"
+            <a
+              href="./contacts.html"
+              class="nav__link nav__link_publications nav__link_active"
               >contact</a
             >
           </li>
@@ -153,149 +155,93 @@
       </nav>
     </header>
 
-    <section class="team-page">
-      <h1 class="team-page-headline">
-        We are used to taking responsibility and always guarantee honest, timely
-        assistance, even in situations where most are powerless.
-      </h1>
-
-      <div class="team-cards">
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_alex.jpg" alt="alex" />
-          <span class="card__name">Alexander Alexandrovsky</span>
-          <span class="card__position">Managing partner</span>
-          <a href="./team-entry.html" class="card__link">
+    <section class="contacts">
+      <div class="contacts-content">
+        <span class="contacts-address contacts-content__item"
+          >Kyiv,<br />
+          Mechnikova str, 14</span
+        >
+        <a
+          href="tel:0800211927"
+          class="phone contacts-phone contacts-content__item"
+          >0800 211 927</a
+        >
+        <a
+          href="mailto:contact@forstudy.space"
+          class="email contacts-email contacts-content__item"
+          >contact@forstudy.space</a
+        >
+        <div class="contacts-facebook">
+          <a
+            href="https://www.facebook.com"
+            class="facebook-link"
+            target="_blank"
+          >
             <svg
-              class="card__arrow"
-              width="10"
-              height="17"
+              class="facebook-logo"
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
+                class="facebook-link__path"
+                d="M38 19.1161C38 8.55857 29.4934 0 19 0C8.50658 0 0 8.55857 0 19.1161C0 28.6575 6.94803 36.5659 16.0312 38V24.6419H11.207V19.1161H16.0312V14.9046C16.0312 10.1136 18.8678 7.46723 23.2078 7.46723C25.2866 7.46723 27.4609 7.84059 27.4609 7.84059V12.545H25.0651C22.7048 12.545 21.9688 14.0185 21.9688 15.5302V19.1161H27.2383L26.3959 24.6419H21.9688V38C31.052 36.5659 38 28.6575 38 19.1161Z"
+                fill="#24A3FF"
               />
             </svg>
           </a>
+          <span class="facebook-desc"
+            >Our page<br />
+            on facebook</span
+          >
         </div>
+      </div>
 
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_eugen.jpg" alt="alex" />
-          <span class="card__name">Evgeny Patrikov</span>
-          <span class="card__position">Equity partner, Attorney-at-law</span>
-          <a href="#" class="card__link">
-            <svg
-              class="card__arrow"
-              width="10"
-              height="17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
+      <div class="service-form contacts-form" id="popup">
+        <h2 class="form__headline headline">We would like to help you</h2>
 
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_vlad.jpg" alt="alex" />
-          <span class="card__name">Владислав Vladislav Melnik</span>
-          <span class="card__position">Associate</span>
-          <a href="#" class="card__link">
-            <svg
-              class="card__arrow"
-              width="10"
-              height="17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_serg.jpg" alt="alex" />
-          <span class="card__name">Sergey Binn</span>
-          <span class="card__position">Associate</span>
-          <a href="#" class="card__link">
-            <svg
-              class="card__arrow"
-              width="10"
-              height="17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_oksana.jpg" alt="alex" />
-          <span class="card__name">Оксана Кобзарь</span>
-          <span class="card__position">Equity partner, Attorney-at-law</span>
-          <a href="./team-entry.html" class="card__link">
-            <svg
-              class="card__arrow"
-              width="10"
-              height="17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
-
-        <div class="team-cards__card">
-          <img class="card__img" src="../img/team_julia.jpg" alt="alex" />
-          <span class="card__name">Julia Wolk</span>
-          <span class="card__position">Associate, Attorney-at-law</span>
-          <a href="#" class="card__link">
-            <svg
-              class="card__arrow"
-              width="10"
-              height="17"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                class="card__arrow_path"
-                d="m1.5 15.5 7-7-7-7"
-                stroke="#24A3FF"
-                stroke-width="2"
-              />
-            </svg>
-          </a>
-        </div>
+        <form action="https://fom.in.ua/echo" class="service-form-input">
+          <label for="name"></label>
+          <input
+            id="name"
+            name="name"
+            class="form__input input__name"
+            type="text"
+            placeholder="Name"
+          />
+          <label for="message"></label>
+          <textarea
+            id="message"
+            name="message"
+            class="form__input input__message"
+            placeholder="Message"
+          ></textarea>
+          <span class="form__question">How to answer you?</span>
+          <label for="phone"></label>
+          <input
+            id="phone"
+            name="phone"
+            type="tel"
+            class="form__input input__phone"
+            placeholder="Phone number"
+          />
+          <label for="email"></label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            class="form__input input__email"
+            placeholder="Email"
+          />
+          <button class="btn form-btn service-btn">Send message</button>
+        </form>
       </div>
     </section>
 
     <footer
-      class="footer services-footer publications-footer team-footer about-footer"
+      class="footer services-footer publications-footer team-footer about-footer contacts-footer"
     >
       <div class="footer-content-wrap">
         <div class="footer-content">
